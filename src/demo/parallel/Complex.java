@@ -88,7 +88,7 @@ public class Complex {
     public Complex divide(Complex other) {
         double real = (re * other.re + im * other.im) / (other.re * other.re + other.im * other.im);
         double imag = (im * other.re - re * other.im) / (other.re * other.re + other.im * other.im);
-        return new Complex(real, imag);
+        return new Complex(real, -imag);
     }
 
     public Complex subtract(Complex other) {
@@ -102,5 +102,13 @@ public class Complex {
     */
     public double lengthSQ() {
         return re * re + im * im;
+    }
+
+    public double getRe() {
+        return re;
+    }
+
+    public double getIm() {
+        return im;
     }
 }
